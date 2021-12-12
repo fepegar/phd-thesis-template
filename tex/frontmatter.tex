@@ -1,0 +1,52 @@
+\frontmatter
+% trick to have different page numbers everywhere
+%\pagenumbering{Roman}
+%\pagenumbering{arabic}
+
+\input{tex/frontmatter/title_page}
+\dominitoc
+
+% "Double or one-and-a-half spacing should be used in typescripts, except for indented quotations or footnotes where single spacing may be used."
+\doublespacing
+
+\copyrightpage{\the\year}{\theauthor}
+
+\cleardoublepage
+\declarationpage{\theauthor}
+
+\cleardoublepage
+\input{tex/frontmatter/abstract}
+
+\cleardoublepage
+\input{tex/frontmatter/impact}
+
+\cleardoublepage
+\input{tex/frontmatter/acknowledgments}
+
+\onehalfspacing
+
+\cleardoublepage
+\input{tex/frontmatter/publications}
+
+\cleardoublepage
+\tableofcontents
+
+\clearpage
+\input{tex/acronyms}
+
+\clearpage
+\addcontentsline{toc}{chapter}{List of figures}
+\listoffigures
+
+\clearpage
+% This is so that minitocs in chapters don't disappear
+% https://tex.stackexchange.com/a/432046/216202
+\adjustmtc
+
+\addcontentsline{toc}{chapter}{List of tables}
+\listoftables
+
+\clearpage
+% Not sure this is needed here as well
+% https://tex.stackexchange.com/a/432046/216202
+\adjustmtc
